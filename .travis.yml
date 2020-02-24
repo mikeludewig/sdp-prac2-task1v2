@@ -1,9 +1,12 @@
 language: csharp
-dotnet: 2.2
-script:
-  dotnet test Problems.Tests
+dotnet: 3.1.101
+
 matrix:
-  include:
-    - dist: xenial
-    - dist: bionic
+    include:
     - os: osx
+    - os: linux
+      dist: xenial
+    - os: linux
+      dist: bionic
+
+script: dotnet test Problems.Tests
