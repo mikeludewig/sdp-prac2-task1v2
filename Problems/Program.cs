@@ -7,6 +7,10 @@ namespace Problems
     {
         public static string Prefix(string input)
         {
+            if (input==null)
+            {
+                return null;
+            }
             int numChar = input.Length;
             string num = numChar.ToString();
             
